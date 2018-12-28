@@ -1,0 +1,27 @@
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+
+  button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .edit-button {
+    margin-right: 1px;
+  }
+}
