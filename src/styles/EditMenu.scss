@@ -1,0 +1,17 @@
+.edit-menu {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  bottom: 41px;
+  height: 130px;
+  display: flex;
+
+  .edit-design {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -4,8 +4,10 @@
   left: 0;
   width: 100%;
   display: flex;
+  z-index: 10;
 
-  button {
+  .edit-button,
+  .random-button {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;

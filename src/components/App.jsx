@@ -1,15 +1,19 @@
 import React from 'react';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
-import '../styles/App.scss';
-import Header from './Header';
-import Menu from './Menu';
+import Home from './Home';
+import Canvas from './Canvas';
+import history from '../history';
 
 const App = () => {
   return (
-    <div className="wrapper">
-      <Header />
-      <Menu />
-    </div>
+    <Router history={history}>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/Canvas" exact component={Canvas} />
+        <Route render={() => <Redirect to="/" />} />
+      </Switch>
+    </Router>
   );
 };
 
