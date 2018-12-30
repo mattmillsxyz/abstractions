@@ -20,12 +20,22 @@ const selectedDesignReducer = (
 
 const palettesReducer = () => {
   return [
-    { colors: ['#355C7D', '#F67280', '#F8B195'] },
-    { colors: ['#6C5B7B', '#C06C84', '#F67280'] },
-    { colors: ['#2A363B', '#E84A5F', '#FF847C'] },
-    { colors: ['#2A363B', '#FF847C', '#FECEAB'] },
-    { colors: ['#E84A5F', '#99B898', '#FF847C'] }
+    { name: 1, colors: ['#ad4232', '#211e27', '#e0e3d2'] },
+    { name: 2, colors: ['#6C5B7B', '#C06C84', '#F67280'] },
+    { name: 3, colors: ['#2A363B', '#E84A5F', '#FF847C'] },
+    { name: 4, colors: ['#2A363B', '#FF847C', '#FECEAB'] },
+    { name: 5, colors: ['#E84A5F', '#99B898', '#FF847C'] }
   ];
+};
+
+const selectedPaletteReducer = (
+  selectedPalette = { name: 1, colors: ['#ad4232', '#211e27', '#e0e3d2'] },
+  action
+) => {
+  if (action.type === 'PALETTE_SELECTED') {
+    return action.payload;
+  }
+  return selectedPalette;
 };
 
 const directionsReducer = () => {
@@ -49,6 +59,7 @@ export default combineReducers({
   designs: designsReducer,
   selectedDesign: selectedDesignReducer,
   palettes: palettesReducer,
+  selectedPalette: selectedPaletteReducer,
   directions: directionsReducer,
   colors: colorsReducer
 });

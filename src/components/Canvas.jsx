@@ -8,14 +8,38 @@ import Epoch from './art/Epoch';
 import Eclipse from './art/Eclipse';
 
 class Canvas extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      height: window.innerHeight,
+      width: window.innerWidth
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => this.updateDimensions());
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', () => this.updateDimensions());
+  }
+
+  updateDimensions() {
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth
+    });
+  }
+
   getArt = () => {
     switch (this.props.design.name) {
       case 'Epoch':
-        return <Epoch />;
+        return <Epoch height={this.state.height} width={this.state.width} />;
       case 'Eclipse':
-        return <Eclipse />;
+        return <Eclipse height={this.state.height} width={this.state.width} />;
       default:
-        return <Epoch />;
+        return <Epoch height={this.state.height} width={this.state.width} />;
     }
   };
 

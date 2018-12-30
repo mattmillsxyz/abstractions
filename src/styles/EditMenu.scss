@@ -1,17 +1,35 @@
 .edit-menu {
   position: fixed;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
   color: white;
-  bottom: 41px;
-  height: 130px;
+  bottom: 40px;
   display: flex;
 
-  .edit-design {
+  .edit-block {
     width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 1px;
+    background: rgba(0, 0, 0, 0.5);
+    height: 130px;
+
+    label {
+      font-size: 10px;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+      user-select: none;
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .edit-menu {
+    flex-direction: column-reverse;
+
+    .edit-block {
+      width: 100%;
+    }
   }
 }

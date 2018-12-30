@@ -14,6 +14,7 @@
     .logo {
       color: white;
       text-decoration: none;
+      user-select: none;
     }
 
     .info-button {
@@ -23,6 +24,7 @@
       border-radius: 10px;
       outline: none;
       cursor: pointer;
+      user-select: none;
     }
   }
 }

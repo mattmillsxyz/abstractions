@@ -4,3 +4,10 @@ export const selectDesign = name => {
     payload: name
   };
 };
+
+export const selectPalette = name => {
+  return {
+    type: 'PALETTE_SELECTED',
+    payload: name
+  };
+};

@@ -1,0 +1,64 @@
+.drop-up {
+  position: relative;
+
+  .input-box {
+    border: 1px solid white;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    user-select: none;
+    padding: 0;
+    z-index: 10;
+
+    .text-input {
+      width: 200px;
+    }
+
+    .color-input {
+      display: flex;
+    }
+  }
+
+  .input-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    z-index: 1;
+
+    li {
+      padding: 10px;
+      background-color: white;
+      color: black;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        background-color: #f7f7f7;
+      }
+    }
+
+    &.color-list {
+      bottom: 33px;
+    }
+  }
+
+  .color-block {
+    width: 30px;
+    height: 28px;
+  }
+}

@@ -21,7 +21,8 @@ class EditDesign extends React.Component {
 
   render() {
     return (
-      <div className="edit-design">
+      <div className="edit-block">
+        <label>DESIGN</label>
         <DropUp
           options={this.props.designs}
           selectedItem={this.props.selectedDesign}
