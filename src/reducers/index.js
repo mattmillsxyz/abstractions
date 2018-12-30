@@ -2,14 +2,16 @@ import { combineReducers } from 'redux';
 
 const designsReducer = () => {
   return [
-    { name: 'Epoch', artist: 'ISO50' },
-    { name: 'Eclipse', artist: 'Matt Mills' },
-    { name: 'Harran II', artist: 'Frank Stella' }
+    { name: 'Epoch', artist: 'Matt Mills' },
+    { name: 'Coming Soon', artist: 'Matt Mills' },
+    { name: 'Coming Soon', artist: 'Matt Mills' },
+    { name: 'Coming Soon', artist: 'Matt Mills' },
+    { name: 'Coming Soon', artist: 'Matt Mills' },
   ];
 };
 
 const selectedDesignReducer = (
-  selectedDesign = { name: 'Epoch', artist: 'ISO50' },
+  selectedDesign = { name: 'Epoch', artist: 'Matt Mills' },
   action
 ) => {
   if (action.type === 'DESIGN_SELECTED') {
@@ -23,7 +25,7 @@ const palettesReducer = () => {
     { name: 1, colors: ['#355C7D', '#F67280', '#F8CA95'] },
     { name: 2, colors: ['#2A363B', '#E84A5F', '#FF847C'] },
     { name: 3, colors: ['#2A363B', '#FF847C', '#FECEAB'] },
-    { name: 4, colors: ['#E84A5F', '#99B898', '#FF847C'] }
+    { name: 4, colors: ['#E84A5F', '#99B898', '#FF847C'] },
   ];
 };
 
@@ -42,7 +44,7 @@ const directionsReducer = () => {
     { name: 'up', value: '↑' },
     { name: 'down', value: '↓' },
     { name: 'left', value: '←' },
-    { name: 'right', value: '→' }
+    { name: 'right', value: '→' },
   ];
 };
 
@@ -62,5 +64,5 @@ export default combineReducers({
   palettes: palettesReducer,
   selectedPalette: selectedPaletteReducer,
   directions: directionsReducer,
-  selectedDirection: selectedDirectionReducer
+  selectedDirection: selectedDirectionReducer,
 });
