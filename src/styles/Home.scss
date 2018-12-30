@@ -43,3 +43,16 @@
     }
   }
 }
+
+@media (max-width: 560px) {
+  .home {
+    h1 {
+      font-size: 30px;
+    }
+
+    .description-text {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

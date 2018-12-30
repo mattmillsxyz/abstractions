@@ -10,7 +10,7 @@ const Home = () => {
       <p className="description-text">
         This project is currently a work in progress.
         <br />
-        Please ignore any weirdness or non-functionality. 👍
+        Please ignore any weirdness or non-functionality.
       </p>
       <Link className="cta-button" to="/canvas">
         Try It
