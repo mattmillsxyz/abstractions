@@ -16,21 +16,15 @@ const Epoch = ({ selectedDirection, selectedPalette, height, width }) => {
           d={`M0 0h${width}v${height}H0z`}
         />
         <polygon
-          points={`0,${height} ${width * 0.5},${height *
-            0.1} ${width},${height}`}
+          points={`0,${height} ${width * 0.35},${height * 0.5} ${width *
+            0.65},${height * 0.5} ${width},${height}`}
           fill={`${selectedPalette.colors[1]}`}
         />
         <circle
           cx={width * 0.5}
-          cy={height * 0.75}
+          cy={height * 0.25}
           r={height * 0.075}
           fill={`${selectedPalette.colors[2]}`}
-        />
-        <circle
-          cx={width * 0.5}
-          cy={height * 0.45}
-          r={height * 0.025}
-          fill={`${selectedPalette.colors[0]}`}
         />
       </svg>
     );
@@ -44,20 +38,15 @@ const Epoch = ({ selectedDirection, selectedPalette, height, width }) => {
           d={`M0 0h${width}v${height}H0z`}
         />
         <polygon
-          points={`0,0 ${width * 0.9},${height * 0.5} 0,${height}`}
+          points={`0,0 ${width * 0.5},${height * 0.35} ${width * 0.5},${height *
+            0.65} 0,${height}`}
           fill={`${selectedPalette.colors[1]}`}
         />
         <circle
-          cx={width * 0.25}
+          cx={width * 0.75}
           cy={height * 0.5}
           r={height * 0.075}
           fill={`${selectedPalette.colors[2]}`}
-        />
-        <circle
-          cx={width * 0.55}
-          cy={height * 0.5}
-          r={height * 0.025}
-          fill={`${selectedPalette.colors[0]}`}
         />
       </svg>
     );

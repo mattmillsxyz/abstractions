@@ -26,6 +26,9 @@ class Menu extends React.Component {
           EDIT
         </button>
         <button className="random-button">RANDOM</button>
+        <button className="share-button" disabled>
+          SHARE
+        </button>
       </div>
     );
   }

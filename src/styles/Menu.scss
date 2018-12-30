@@ -7,9 +7,10 @@
   z-index: 10;
 
   .edit-button,
-  .random-button {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+  .random-button,
+  .share-button {
+    background: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +25,8 @@
     user-select: none;
   }
 
-  .edit-button {
-    margin-right: 1px;
+  .edit-button,
+  .random-button {
+    border-right: 1px solid #eee;
   }
 }

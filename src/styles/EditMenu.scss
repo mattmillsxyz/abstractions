@@ -11,7 +11,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 1px;
     background: rgba(0, 0, 0, 0.5);
     height: 130px;
 
@@ -61,8 +60,9 @@
 
     .edit-block {
       width: 100%;
-      padding: 20px 0;
+      padding: 26px 0;
       height: auto;
+      margin-bottom: 1px;
     }
   }
 }

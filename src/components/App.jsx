@@ -1,6 +1,7 @@
 import React from 'react';
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
 
+import '../styles/App.scss';
 import Home from './Home';
 import Canvas from './Canvas';
 import history from '../history';

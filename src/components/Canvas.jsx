@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import '../styles/App.scss';
 import Header from './Header';
 import Menu from './Menu';
 import Epoch from './art/Epoch';
@@ -12,7 +11,7 @@ class Canvas extends React.Component {
     super(props);
 
     this.state = {
-      height: window.innerHeight,
+      height: window.innerHeight - 40,
       width: window.innerWidth
     };
   }
