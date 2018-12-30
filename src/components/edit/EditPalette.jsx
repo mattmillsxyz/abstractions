@@ -6,25 +6,12 @@ import { selectPalette } from '../../actions';
 import DropUp from '../DropUp';
 
 class EditPalette extends React.Component {
-  renderList() {
-    return this.props.palettes.map(palette => {
-      return (
-        <button
-          key={`${palette.name}-${palette.artist}`}
-          onClick={() => this.props.selectPalette(palette)}
-        >
-          {palette.name}
-        </button>
-      );
-    });
-  }
-
   render() {
     return (
       <div className="edit-block">
         <label>PALETTE</label>
         <DropUp
-          type="color"
+          type="palette"
           options={this.props.palettes}
           selectedItem={this.props.selectedPalette}
           onItemSelect={palette => this.props.selectPalette(palette)}

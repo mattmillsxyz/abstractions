@@ -20,16 +20,15 @@ const selectedDesignReducer = (
 
 const palettesReducer = () => {
   return [
-    { name: 1, colors: ['#ad4232', '#211e27', '#e0e3d2'] },
-    { name: 2, colors: ['#6C5B7B', '#C06C84', '#F67280'] },
-    { name: 3, colors: ['#2A363B', '#E84A5F', '#FF847C'] },
-    { name: 4, colors: ['#2A363B', '#FF847C', '#FECEAB'] },
-    { name: 5, colors: ['#E84A5F', '#99B898', '#FF847C'] }
+    { name: 1, colors: ['#355C7D', '#F67280', '#F8CA95'] },
+    { name: 2, colors: ['#2A363B', '#E84A5F', '#FF847C'] },
+    { name: 3, colors: ['#2A363B', '#FF847C', '#FECEAB'] },
+    { name: 4, colors: ['#E84A5F', '#99B898', '#FF847C'] }
   ];
 };
 
 const selectedPaletteReducer = (
-  selectedPalette = { name: 1, colors: ['#ad4232', '#211e27', '#e0e3d2'] },
+  selectedPalette = { name: 1, colors: ['#355C7D', '#F67280', '#F8CA95'] },
   action
 ) => {
   if (action.type === 'PALETTE_SELECTED') {
@@ -40,19 +39,21 @@ const selectedPaletteReducer = (
 
 const directionsReducer = () => {
   return [
-    { name: 'up', selected: false },
-    { name: 'down', selected: false },
-    { name: 'left', selected: false },
-    { name: 'right', selected: false }
+    { name: 'up', value: '↑' },
+    { name: 'down', value: '↓' },
+    { name: 'left', value: '←' },
+    { name: 'right', value: '→' }
   ];
 };
 
-const colorsReducer = () => {
-  return [
-    { name: 'one', value: '', selected: false },
-    { name: 'two', value: '', selected: false },
-    { name: 'three', value: '', selected: false }
-  ];
+const selectedDirectionReducer = (
+  selectedDirection = { name: 'up', value: '↑' },
+  action
+) => {
+  if (action.type === 'DIRECTION_SELECTED') {
+    return action.payload;
+  }
+  return selectedDirection;
 };
 
 export default combineReducers({
@@ -61,5 +62,5 @@ export default combineReducers({
   palettes: palettesReducer,
   selectedPalette: selectedPaletteReducer,
   directions: directionsReducer,
-  colors: colorsReducer
+  selectedDirection: selectedDirectionReducer
 });

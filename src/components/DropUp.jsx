@@ -19,8 +19,9 @@ class DropUp extends React.Component {
   };
 
   renderList() {
+    console.log(this.props.options);
     return this.props.options.map(option => {
-      if (this.props.type === 'color') {
+      if (this.props.type === 'palette') {
         const colors = option.colors.map(color => {
           return (
             <div
@@ -75,11 +76,11 @@ class DropUp extends React.Component {
 
   render() {
     const listClass =
-      this.props.type === 'color' ? 'input-list color-list' : 'input-list';
+      this.props.type === 'palette' ? 'input-list color-list' : 'input-list';
     return (
       <div className="drop-up">
         <button className="input-box" onClick={() => this.toggle()}>
-          {this.props.type === 'color'
+          {this.props.type === 'palette'
             ? this.renderColorInput()
             : this.renderTextInput()}
         </button>

@@ -6,19 +6,6 @@ import { selectDesign } from '../../actions';
 import DropUp from '../DropUp';
 
 class EditDesign extends React.Component {
-  renderList() {
-    return this.props.designs.map(design => {
-      return (
-        <button
-          key={`${design.name}-${design.artist}`}
-          onClick={() => this.props.selectDesign(design)}
-        >
-          {design.name}
-        </button>
-      );
-    });
-  }
-
   render() {
     return (
       <div className="edit-block">

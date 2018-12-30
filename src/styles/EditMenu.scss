@@ -6,7 +6,7 @@
   display: flex;
 
   .edit-block {
-    width: 25%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,34 @@
       user-select: none;
     }
   }
+
+  .colors-wrapper {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+  }
+
+  .button-list {
+    width: 175px;
+    display: flex;
+    justify-content: space-between;
+
+    .button-input {
+      background: none;
+      color: white;
+      font-family: sans-serif;
+      border: 1px solid transparent;
+      height: 30px;
+      width: 30px;
+      outline: none;
+      cursor: pointer;
+      font-size: 16px;
+
+      &.active {
+        border-color: white;
+      }
+    }
+  }
 }
 
 @media (max-width: 930px) {
@@ -30,6 +58,8 @@
 
     .edit-block {
       width: 100%;
+      padding: 20px 0;
+      height: auto;
     }
   }
 }

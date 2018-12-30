@@ -11,3 +11,10 @@ export const selectPalette = name => {
     payload: name
   };
 };
+
+export const selectDirection = name => {
+  return {
+    type: 'DIRECTION_SELECTED',
+    payload: name
+  };
+};
