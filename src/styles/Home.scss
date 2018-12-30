@@ -1,0 +1,45 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+
+  h1 {
+    font-size: 64px;
+    letter-spacing: 2px;
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .description-text {
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+  }
+
+  .cta-button {
+    padding: 16px 40px;
+    background: coral;
+    color: white;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      background: lighten($color: coral, $amount: 5);
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #444;
+    a {
+      color: #444;
+    }
+  }
+}
