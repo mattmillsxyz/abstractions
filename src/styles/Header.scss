@@ -18,14 +18,18 @@
     }
 
     .info-button {
-      border: none;
       width: 20px;
       height: 20px;
-      border-radius: 10px;
-      outline: none;
       cursor: pointer;
       user-select: none;
-      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

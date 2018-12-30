@@ -11,13 +11,13 @@ class EditDirection extends React.Component {
           ? 'button-input active'
           : 'button-input';
       return (
-        <button
+        <div
           key={direction.name}
           className={buttonClasses}
           onClick={() => this.props.selectDirection(direction)}
         >
           {direction.value}
-        </button>
+        </div>
       );
     });
   }

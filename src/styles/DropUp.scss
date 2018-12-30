@@ -19,6 +19,10 @@
 
     .text-input {
       width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
     }
 
     .color-input {
@@ -53,12 +57,12 @@
     }
 
     &.color-list {
-      bottom: 33px;
+      bottom: 32px;
     }
   }
 
   .color-block {
     width: 30px;
-    height: 28px;
+    height: 30px;
   }
 }

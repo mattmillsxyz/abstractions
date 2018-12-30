@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../styles/Header.scss';
+import { ReactComponent as InfoIcon } from '../assets/images/info-button.svg';
 
 const Header = () => {
   return (
@@ -10,7 +11,9 @@ const Header = () => {
         <Link className="logo" to="/">
           ABSTRACTIONS
         </Link>
-        <button className="info-button">?</button>
+        <Link to="/" className="info-button">
+          <InfoIcon />
+        </Link>
       </div>
     </div>
   );
