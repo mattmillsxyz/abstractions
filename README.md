@@ -18,7 +18,8 @@ You will also see any lint errors in the console.
 
 ### Implemented
 
-- View a design
+- View home page (/)
+- View a design (/canvas)
 - Edit a design (choose design, palette, and direction)
 - Randomize design (design, palette, and direction)
 - View design details (opens modal with artist information)
