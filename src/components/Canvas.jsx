@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Header from './Header';
 import Menu from './Menu';
+import Modal from './Modal';
 import Epoch from './art/Epoch';
 import Eclipse from './art/Eclipse';
 
@@ -12,7 +13,7 @@ class Canvas extends React.Component {
 
     this.state = {
       height: window.innerHeight - 40,
-      width: window.innerWidth
+      width: window.innerWidth,
     };
   }
 
@@ -27,7 +28,7 @@ class Canvas extends React.Component {
   updateDimensions() {
     this.setState({
       height: window.innerHeight,
-      width: window.innerWidth
+      width: window.innerWidth,
     });
   }
 
@@ -45,6 +46,7 @@ class Canvas extends React.Component {
   render() {
     return (
       <div className="wrapper">
+        {this.props.showModal && <Modal />}
         <Header />
         {this.getArt()}
         <Menu />
@@ -55,7 +57,8 @@ class Canvas extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    design: state.selectedDesign
+    design: state.selectedDesign,
+    showModal: state.showModal,
   };
 };
 

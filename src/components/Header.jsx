@@ -1,22 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import '../styles/Header.scss';
-import { ReactComponent as InfoIcon } from '../assets/images/info-button.svg';
+import { showModal } from '../actions';
+import { ReactComponent as InfoIcon } from '../assets/images/info-icon.svg';
 
-const Header = () => {
+const Header = props => {
   return (
     <div className="header">
       <div className="header-inner">
         <Link className="logo" to="/">
           ABSTRACTIONS
         </Link>
-        <Link to="/" className="info-button">
+        <div onClick={() => props.showModal(true)} className="info-button">
           <InfoIcon />
-        </Link>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Header;
+export default connect(
+  null,
+  { showModal }
+)(Header);

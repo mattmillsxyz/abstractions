@@ -1,0 +1,64 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+
+  .modal-block {
+    max-width: 400px;
+    padding: 40px 20px;
+
+    .modal-title {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 40px;
+        margin: 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .artist-name {
+        font-size: 16px;
+        color: gray;
+        margin: 0;
+      }
+    }
+
+    .modal-content {
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 1px;
+
+      a,
+      a:visited {
+        color: blue;
+      }
+    }
+  }
+
+  .close-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
