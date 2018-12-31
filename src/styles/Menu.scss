@@ -34,4 +34,10 @@
   .random-button {
     border-right: 1px solid #eee;
   }
+
+  // Disable share button
+  .share-button {
+    color: gray;
+    cursor: not-allowed;
+  }
 }
