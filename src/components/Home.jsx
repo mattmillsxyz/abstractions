@@ -8,9 +8,8 @@ const Home = () => {
     <div className="home">
       <h1>ABSTRACTIONS</h1>
       <p className="description-text">
-        This project is currently a work in progress.
-        <br />
-        Please ignore any weirdness or non-functionality.
+        ABSTRACTIONS is a proof of concept application for displaying and
+        modifying SVG designs. It is currently a work in progress.
       </p>
       <Link className="cta-button" to="/canvas">
         Try It
