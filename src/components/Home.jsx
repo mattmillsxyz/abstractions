@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../styles/Home.scss';
+import GitHubCorner from './GithubCorner';
 
 const Home = () => {
   return (
     <div className="home">
+      <GitHubCorner />
       <h1>ABSTRACTIONS</h1>
       <p className="description-text">
         ABSTRACTIONS is a proof of concept application for displaying and
