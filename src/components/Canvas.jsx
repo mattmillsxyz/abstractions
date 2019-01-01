@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import Header from './Header';
 import Menu from './Menu';
 import Modal from './Modal';
-import Epoch from './art/Epoch';
-import Eclipse from './art/Eclipse';
+import Epoch from './designs/Epoch';
+import Eclipse from './designs/Eclipse';
+import Boxed from './designs/Boxed';
 
 class Canvas extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Canvas extends React.Component {
 
   updateDimensions() {
     this.setState({
-      height: window.innerHeight,
+      height: window.innerHeight - 40,
       width: window.innerWidth,
     });
   }
@@ -36,6 +37,8 @@ class Canvas extends React.Component {
     switch (this.props.design.name) {
       case 'Epoch':
         return <Epoch height={this.state.height} width={this.state.width} />;
+      case 'Boxed':
+        return <Boxed height={this.state.height} width={this.state.width} />;
       case 'Eclipse':
         return <Eclipse height={this.state.height} width={this.state.width} />;
       default:

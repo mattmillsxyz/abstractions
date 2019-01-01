@@ -29,5 +29,6 @@ You will also see any lint errors in the console.
 ### To Be Implemented
 
 - Add additional designs
+- Add more/better palettes
 - Update home page with full project details and feature description
 - Share button (click button to share to Twitter with link to modified design)
