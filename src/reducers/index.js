@@ -17,7 +17,7 @@ const palettesReducer = () => {
   return palettes;
 };
 
-const selectedPaletteReducer = (selectedPalette = palettes[1], action) => {
+const selectedPaletteReducer = (selectedPalette = palettes[4], action) => {
   if (action.type === 'PALETTE_SELECTED') {
     return action.payload;
   }

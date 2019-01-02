@@ -18,7 +18,7 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
         <circle
           cx={width * 0.5}
           cy={height * 0.5}
-          r={height * 0.25}
+          r={width > height ? height * 0.35 : width * 0.35}
           fill="url(#prefix__paint1_linear)"
         />
         <circle
@@ -71,7 +71,7 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
         <circle
           cx={width * 0.5}
           cy={height * 0.5}
-          r={height * 0.25}
+          r={width > height ? height * 0.35 : width * 0.35}
           fill="url(#prefix__paint1_linear)"
         />
         <circle
@@ -126,7 +126,7 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
 const mapStateToProps = state => {
   return {
     selectedPalette: state.selectedPalette,
-    selectedDirection: state.selectedDirection
+    selectedDirection: state.selectedDirection,
   };
 };
 

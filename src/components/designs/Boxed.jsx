@@ -12,20 +12,33 @@ const Boxed = ({ selectedDirection, selectedPalette, height, width }) => {
     const boxes = [];
     const colorOne = direction === 'down' || direction === 'right' ? 1 : 2;
     const colorTwo = direction === 'down' || direction === 'right' ? 2 : 1;
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 30; i++) {
       let color = i % 2 === 0 ? colorOne : colorTwo;
       let boxWidth = width - i * 0.025 * width;
       let boxHeight = height - i * 0.025 * height;
-      boxes.push(
-        <rect
-          fill={`${selectedPalette.colors[color]}`}
-          x={width * 0.5 - boxWidth * 0.5}
-          y={height * 0.5 - boxHeight * 0.5}
-          width={boxWidth}
-          height={boxHeight}
-          key={`box--${i}`}
-        />
-      );
+      if (i < 29) {
+        boxes.push(
+          <rect
+            fill={`${selectedPalette.colors[color]}`}
+            x={width * 0.5 - boxWidth * 0.5}
+            y={height * 0.5 - boxHeight * 0.5}
+            width={boxWidth}
+            height={boxHeight}
+            key={`box--${i}`}
+          />
+        );
+      } else {
+        boxes.push(
+          <rect
+            fill={`${selectedPalette.colors[0]}`}
+            x={width * 0.5 - boxWidth * 0.5}
+            y={height * 0.5 - boxHeight * 0.5}
+            width={boxWidth}
+            height={boxHeight}
+            key={`box--${i}`}
+          />
+        );
+      }
     }
     return boxes;
   };
