@@ -12,14 +12,14 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
     return (
       <svg className={svgClasses} width={width} height={height} fill="none">
         <path
-          fill="url(#prefix__paint0_linear)"
+          fill="url(#eclipse-vertical__paint0_linear)"
           d={`M0 0h${width}v${height}H0z`}
         />
         <circle
           cx={width * 0.5}
           cy={height * 0.5}
           r={width > height ? height * 0.35 : width * 0.35}
-          fill="url(#prefix__paint1_linear)"
+          fill="url(#eclipse-vertical__paint1_linear)"
         />
         <circle
           cx={width * 0.5}
@@ -35,7 +35,7 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
         />
         <defs>
           <linearGradient
-            id="prefix__paint0_linear"
+            id="eclipse-vertical__paint0_linear"
             x1={width * 0.5}
             y1={0}
             x2={width * 0.5}
@@ -46,7 +46,7 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
             <stop offset={1} stopColor={`${selectedPalette.colors[2]}`} />
           </linearGradient>
           <linearGradient
-            id="prefix__paint1_linear"
+            id="eclipse-vertical__paint1_linear"
             x1={width * 0.5}
             y1={height * 0.5 - height * 0.3}
             x2={width * 0.5}
@@ -65,14 +65,14 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
     return (
       <svg className={svgClasses} width={width} height={height} fill="none">
         <path
-          fill="url(#prefix__paint0_linear)"
+          fill="url(#eclipse-horizontal__paint0_linear)"
           d={`M0 0h${width}v${height}H0z`}
         />
         <circle
           cx={width * 0.5}
           cy={height * 0.5}
           r={width > height ? height * 0.35 : width * 0.35}
-          fill="url(#prefix__paint1_linear)"
+          fill="url(#eclipse-horizontal__paint1_linear)"
         />
         <circle
           cx={width * 0.15}
@@ -88,7 +88,7 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
         />
         <defs>
           <linearGradient
-            id="prefix__paint0_linear"
+            id="eclipse-horizontal__paint0_linear"
             x1={0}
             y1={height * 0.5}
             x2={width}
@@ -99,7 +99,7 @@ const Eclipse = ({ selectedDirection, selectedPalette, height, width }) => {
             <stop offset={1} stopColor={`${selectedPalette.colors[2]}`} />
           </linearGradient>
           <linearGradient
-            id="prefix__paint1_linear"
+            id="eclipse-horizontal__paint1_linear"
             x1={width * 0.5 - width * 0.3}
             y1={height * 0.5}
             x2={width * 0.5 + width * 0.3}

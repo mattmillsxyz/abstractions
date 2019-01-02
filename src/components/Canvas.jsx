@@ -7,6 +7,8 @@ import Modal from './Modal';
 import Epoch from './designs/Epoch';
 import Eclipse from './designs/Eclipse';
 import Blocked from './designs/Blocked';
+import Boxed from './designs/Boxed';
+import Gradual from './designs/Gradual';
 
 class Canvas extends React.Component {
   constructor(props) {
@@ -39,10 +41,14 @@ class Canvas extends React.Component {
         return <Epoch height={this.state.height} width={this.state.width} />;
       case 'Eclipse':
         return <Eclipse height={this.state.height} width={this.state.width} />;
+      case 'Boxed':
+        return <Boxed height={this.state.height} width={this.state.width} />;
       case 'Blocked':
         return <Blocked height={this.state.height} width={this.state.width} />;
+      case 'Gradual':
+        return <Gradual height={this.state.height} width={this.state.width} />;
       default:
-        return <Epoch height={this.state.height} width={this.state.width} />;
+        return <Eclipse height={this.state.height} width={this.state.width} />;
     }
   };
 

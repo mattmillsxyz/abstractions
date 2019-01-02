@@ -6,7 +6,7 @@ const designsReducer = () => {
   return designs;
 };
 
-const selectedDesignReducer = (selectedDesign = designs[2], action) => {
+const selectedDesignReducer = (selectedDesign = designs[0], action) => {
   if (action.type === 'DESIGN_SELECTED') {
     return action.payload;
   }
