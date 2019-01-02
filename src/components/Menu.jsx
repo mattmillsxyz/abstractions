@@ -47,7 +47,7 @@ class Menu extends React.Component {
       <div className="menu">
         {this.state.showEditMenu && <EditMenu />}
         <button onClick={() => this.toggle()} className="edit-button">
-          EDIT
+          {this.state.showEditMenu ? 'DONE' : 'EDIT'}
         </button>
         <button className="random-button" onClick={() => this.randomize()}>
           RANDOM
