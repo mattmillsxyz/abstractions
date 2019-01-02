@@ -1,10 +1,10 @@
 export default [
   {
-    name: 'Boxed',
-    artist: 'Matt Mills',
-    palettes: [0, 1, 2, 3, 4, 5],
+    name: 'Blocked',
+    artist: 'Felipe Pantone',
+    palettes: [6],
     description:
-      'This design is another one I created as a test for this ABSTRACTIONS project. It is an attempt at creating procedurally generated shapes.',
+      'This design is inspired by the work of <a href="https://www.felipepantone.com/" target="_blank">Felipe Pantone</a>. I instantly fell in love with his style the first time I saw it on Instagram. And, including it as part of the ABSTRACTIONS collections was a must.',
   },
   {
     name: 'Epoch',

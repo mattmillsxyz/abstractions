@@ -5,4 +5,21 @@ export default [
   { name: 3, colors: ['#FF6F59', '#B2B09B', '#2EC4B6'] },
   { name: 4, colors: ['#D0FF89', '#182952', '#FF44B4'] },
   { name: 5, colors: ['#BBDEF0', '#00A6A6', '#F08700'] },
+  {
+    name: 6,
+    colors: [
+      '#23262E',
+      '#212C5E',
+      '#2866BF',
+      '#3C91D2',
+      '#54BEEB',
+      '#94E0F5',
+      '#D1EEF4',
+      '#F7FEFD',
+      '#F4E961',
+      '#E69855',
+      '#DE4151',
+      '#A1417D',
+    ],
+  },
 ];

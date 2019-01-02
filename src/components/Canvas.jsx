@@ -6,7 +6,7 @@ import Menu from './Menu';
 import Modal from './Modal';
 import Epoch from './designs/Epoch';
 import Eclipse from './designs/Eclipse';
-import Boxed from './designs/Boxed';
+import Blocked from './designs/Blocked';
 
 class Canvas extends React.Component {
   constructor(props) {
@@ -37,10 +37,10 @@ class Canvas extends React.Component {
     switch (this.props.design.name) {
       case 'Epoch':
         return <Epoch height={this.state.height} width={this.state.width} />;
-      case 'Boxed':
-        return <Boxed height={this.state.height} width={this.state.width} />;
       case 'Eclipse':
         return <Eclipse height={this.state.height} width={this.state.width} />;
+      case 'Blocked':
+        return <Blocked height={this.state.height} width={this.state.width} />;
       default:
         return <Epoch height={this.state.height} width={this.state.width} />;
     }

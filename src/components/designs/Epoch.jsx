@@ -16,13 +16,13 @@ const Epoch = ({ selectedDirection, selectedPalette, height, width }) => {
           d={`M0 0h${width}v${height}H0z`}
         />
         <polygon
-          points={`0,${height} ${width * 0.35},${height * 0.5} ${width *
-            0.65},${height * 0.5} ${width},${height}`}
+          points={`0,${height} ${width * 0.35},${height * 0.6} ${width *
+            0.65},${height * 0.6} ${width},${height}`}
           fill={`${selectedPalette.colors[1]}`}
         />
         <circle
           cx={width * 0.5}
-          cy={height * 0.25}
+          cy={height * 0.35}
           r={height * 0.075}
           fill={`${selectedPalette.colors[2]}`}
         />
@@ -38,12 +38,12 @@ const Epoch = ({ selectedDirection, selectedPalette, height, width }) => {
           d={`M0 0h${width}v${height}H0z`}
         />
         <polygon
-          points={`0,0 ${width * 0.5},${height * 0.35} ${width * 0.5},${height *
+          points={`0,0 ${width * 0.4},${height * 0.35} ${width * 0.4},${height *
             0.65} 0,${height}`}
           fill={`${selectedPalette.colors[1]}`}
         />
         <circle
-          cx={width * 0.75}
+          cx={width * 0.65}
           cy={height * 0.5}
           r={height * 0.075}
           fill={`${selectedPalette.colors[2]}`}
@@ -64,7 +64,7 @@ const Epoch = ({ selectedDirection, selectedPalette, height, width }) => {
 const mapStateToProps = state => {
   return {
     selectedPalette: state.selectedPalette,
-    selectedDirection: state.selectedDirection
+    selectedDirection: state.selectedDirection,
   };
 };
 
