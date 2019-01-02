@@ -12,11 +12,12 @@ const Boxed = ({ selectedDirection, selectedPalette, height, width }) => {
     const boxes = [];
     const colorOne = direction === 'down' || direction === 'right' ? 1 : 2;
     const colorTwo = direction === 'down' || direction === 'right' ? 2 : 1;
-    for (let i = 0; i < 30; i++) {
-      let color = i % 2 === 0 ? colorOne : colorTwo;
-      let boxWidth = width - i * 0.025 * width;
-      let boxHeight = height - i * 0.025 * height;
-      if (i < 29) {
+    for (let i = 0; i < 24; i++) {
+      const color = i % 2 === 0 ? colorOne : colorTwo;
+      const boxWidth =
+        width > height ? width - i * 0.02 * width : width - i * 0.038 * width;
+      const boxHeight = height - i * 0.025 * height;
+      if (i < 23) {
         boxes.push(
           <rect
             fill={`${selectedPalette.colors[color]}`}
