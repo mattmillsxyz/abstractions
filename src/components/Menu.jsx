@@ -48,10 +48,6 @@ class Menu extends React.Component {
     const paletteIndex = this.props.palettes.indexOf(
       this.props.selectedPalette
     );
-
-    console.log(
-      `${window.location.href}/${designIndex}/${paletteIndex}/${directionIndex}`
-    );
   }
 
   toggle() {
