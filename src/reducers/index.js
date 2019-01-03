@@ -26,15 +26,15 @@ const selectedPaletteReducer = (selectedPalette = palettes[4], action) => {
 
 const directionsReducer = () => {
   return [
-    { name: 'up', value: '↑' },
-    { name: 'down', value: '↓' },
-    { name: 'left', value: '←' },
-    { name: 'right', value: '→' },
+    { name: 'up', value: '\u2191' },
+    { name: 'down', value: '\u2193' },
+    { name: 'left', value: '\u2190' },
+    { name: 'right', value: '\u2192' },
   ];
 };
 
 const selectedDirectionReducer = (
-  selectedDirection = { name: 'up', value: '↑' },
+  selectedDirection = { name: 'up', value: '\u2191' },
   action
 ) => {
   if (action.type === 'DIRECTION_SELECTED') {

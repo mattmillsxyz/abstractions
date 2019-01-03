@@ -15,9 +15,8 @@ class EditDirection extends React.Component {
           key={direction.name}
           className={buttonClasses}
           onClick={() => this.props.selectDirection(direction)}
-        >
-          {direction.value}
-        </div>
+          dangerouslySetInnerHTML={{ __html: direction.value }}
+        />
       );
     });
   }
@@ -35,7 +34,7 @@ class EditDirection extends React.Component {
 const mapStateToProps = state => {
   return {
     directions: state.directions,
-    selectedDirection: state.selectedDirection
+    selectedDirection: state.selectedDirection,
   };
 };
 

@@ -13,7 +13,11 @@ const App = () => {
       <GAListener>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/Canvas" exact component={Canvas} />
+          <Route
+            path="/canvas/:design?/:palette?/:direction?"
+            exact
+            component={Canvas}
+          />
           <Route render={() => <Redirect to="/" />} />
         </Switch>
       </GAListener>

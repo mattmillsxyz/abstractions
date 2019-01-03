@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { find } from 'lodash';
 
 import Header from './Header';
 import Menu from './Menu';
@@ -9,6 +10,8 @@ import Eclipse from './designs/Eclipse';
 import Blocked from './designs/Blocked';
 import Boxed from './designs/Boxed';
 import Gradual from './designs/Gradual';
+
+import { selectDesign, selectPalette, selectDirection } from '../actions';
 
 class Canvas extends React.Component {
   constructor(props) {
@@ -21,11 +24,45 @@ class Canvas extends React.Component {
   }
 
   componentDidMount() {
+    const { design, palette, direction } = this.props.match.params;
+
+    // TODO: This feels dirty, should refactor...
+    if (design && design >= 0 && design <= this.props.designs.length) {
+      this.props.history.push('/canvas');
+      this.props.selectDesign(this.props.designs[design]);
+      if (
+        palette &&
+        this.props.designs[design].palettes.includes(parseInt(palette))
+      ) {
+        this.props.selectPalette(this.props.palettes[palette]);
+      } else {
+        this.getInitialPalette(this.props.designs[design]);
+      }
+      if (
+        direction &&
+        direction >= 0 &&
+        direction < this.props.directions.length
+      ) {
+        this.props.selectDirection(this.props.directions[direction]);
+      } else {
+        this.props.selectDirection(this.props.directions[0]);
+      }
+    }
+
     window.addEventListener('resize', () => this.updateDimensions());
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', () => this.updateDimensions());
+  }
+
+  getInitialPalette(design) {
+    const initialPalette = find(this.props.palettes, palette => {
+      if (palette.name === design.palettes[0]) {
+        return palette;
+      }
+    });
+    this.props.selectPalette(initialPalette);
   }
 
   updateDimensions() {
@@ -36,7 +73,7 @@ class Canvas extends React.Component {
   }
 
   getArt = () => {
-    switch (this.props.design.name) {
+    switch (this.props.selectedDesign.name) {
       case 'Epoch':
         return <Epoch height={this.state.height} width={this.state.width} />;
       case 'Eclipse':
@@ -66,9 +103,15 @@ class Canvas extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    design: state.selectedDesign,
+    designs: state.designs,
+    directions: state.directions,
+    palettes: state.palettes,
+    selectedDesign: state.selectedDesign,
     showModal: state.showModal,
   };
 };
 
-export default connect(mapStateToProps)(Canvas);
+export default connect(
+  mapStateToProps,
+  { selectDesign, selectPalette, selectDirection }
+)(Canvas);
