@@ -85,10 +85,10 @@ const Gradual = ({ selectedDirection, selectedPalette, height, width }) => {
           </linearGradient>
           <linearGradient
             id="gradual-vertical__paint1_linear"
-            x1={0}
+            x1={width * 0.5}
             y1={height * 0.65}
-            x2={width}
-            y2={height * 0.65}
+            x2={width * 0.5}
+            y2={height * 0.8}
             gradientUnits="userSpaceOnUse"
           >
             {renderStrips()}
@@ -123,10 +123,10 @@ const Gradual = ({ selectedDirection, selectedPalette, height, width }) => {
           </linearGradient>
           <linearGradient
             id="gradual-horizontal__paint1_linear"
-            x1={width * 0.5}
-            y1={0}
-            x2={width * 0.5}
-            y2={height}
+            x1={width * 0.65}
+            y1={height * 0.5}
+            x2={width * 0.8}
+            y2={height * 0.5}
             gradientUnits="userSpaceOnUse"
           >
             {renderStrips()}

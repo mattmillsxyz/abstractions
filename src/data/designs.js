@@ -29,7 +29,7 @@ export default [
   {
     name: 'Gradual',
     artist: 'Felipe Pantone',
-    palettes: [9, 7, 8, 6],
+    palettes: [8, 7, 6, 9],
     description:
       'This design is inspired by the work of <a href="https://www.felipepantone.com/" target="_blank">Felipe Pantone</a>. I instantly fell in love with his style the first time I saw it on Instagram. And, including it as part of the ABSTRACTIONS collections was a must.',
   },
