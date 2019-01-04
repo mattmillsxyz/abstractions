@@ -16,6 +16,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
+    "react-social-sharing": "^2.0.1",
     "redux": "^4.0.1"
   },
   "scripts": {

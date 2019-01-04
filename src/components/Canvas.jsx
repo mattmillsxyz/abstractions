@@ -4,7 +4,6 @@ import { find } from 'lodash';
 
 import Header from './Header';
 import Menu from './Menu';
-import Modal from './Modal';
 import Epoch from './designs/Epoch';
 import Eclipse from './designs/Eclipse';
 import Blocked from './designs/Blocked';
@@ -92,7 +91,6 @@ class Canvas extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        {this.props.showModal && <Modal />}
         <Header />
         {this.getArt()}
         <Menu />
@@ -107,7 +105,6 @@ const mapStateToProps = state => {
     directions: state.directions,
     palettes: state.palettes,
     selectedDesign: state.selectedDesign,
-    showModal: state.showModal,
   };
 };
 

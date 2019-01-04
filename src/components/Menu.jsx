@@ -5,6 +5,7 @@ import { find, isEqual } from 'lodash';
 import '../styles/Menu.scss';
 import EditMenu from './edit/EditMenu';
 import { selectDesign, selectPalette, selectDirection } from '../actions';
+import Modal from './Modal';
 
 class Menu extends React.Component {
   constructor(props) {
@@ -12,6 +13,8 @@ class Menu extends React.Component {
 
     this.state = {
       showEditMenu: false,
+      showShareModal: false,
+      twitterLink: '',
     };
   }
 
@@ -48,9 +51,23 @@ class Menu extends React.Component {
     const paletteIndex = this.props.palettes.indexOf(
       this.props.selectedPalette
     );
+
+    this.setState({
+      twitterLink: `${
+        window.location
+      }/${designIndex}/${paletteIndex}/${directionIndex}`,
+    });
+
+    this.toggleShareModal();
   }
 
-  toggle() {
+  toggleShareModal() {
+    this.setState({
+      showShareModal: !this.state.showShareModal,
+    });
+  }
+
+  toggleMenu() {
     this.setState({
       showEditMenu: !this.state.showEditMenu,
     });
@@ -60,7 +77,7 @@ class Menu extends React.Component {
     return (
       <div className="menu">
         {this.state.showEditMenu && <EditMenu />}
-        <button onClick={() => this.toggle()} className="edit-button">
+        <button onClick={() => this.toggleMenu()} className="edit-button">
           {this.state.showEditMenu ? 'DONE' : 'EDIT'}
         </button>
         <button className="random-button" onClick={() => this.randomize()}>
@@ -69,6 +86,14 @@ class Menu extends React.Component {
         <button className="share-button" onClick={() => this.shareDesign()}>
           SHARE
         </button>
+        {this.state.showShareModal && (
+          <Modal
+            type="share"
+            shareLink={this.state.twitterLink}
+            twitterMessage="Check out this design I created with ABSTRACTIONS!"
+            onDismiss={() => this.toggleShareModal()}
+          />
+        )}
       </div>
     );
   }
