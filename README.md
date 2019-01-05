@@ -25,10 +25,11 @@ You will also see any lint errors in the console.
 - Edit a design (choose design, palette, and direction)
 - Randomize design (design, palette, and direction)
 - View design details (opens modal with artist information)
+- Share button (click button to share to Twitter with link to modified design)
 
 ### To Be Implemented
 
+- Make UI more accessible
 - Add additional designs
 - Add more/better palettes
 - Update home page with full project details and feature description
-- Share button (click button to share to Twitter with link to modified design)
